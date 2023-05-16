@@ -1,4 +1,4 @@
-# Título do Projeto
+# Projeto simples de Loja
 
 Este projeto de logística visa desenvolver um sistema eficiente e escalável para gerenciar o fluxo de produtos, desde a origem até o destino final, otimizando o processo de distribuição e entrega. 
 
