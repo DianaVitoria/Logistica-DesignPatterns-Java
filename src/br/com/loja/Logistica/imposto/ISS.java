@@ -2,7 +2,7 @@ package br.com.loja.Logistica.imposto;
 
 import java.math.BigDecimal;
 
-import br.com.loja.Logistica.Orcamento;
+import br.com.loja.Logistica.orcamento.Orcamento;
 
 public class ISS {
 
