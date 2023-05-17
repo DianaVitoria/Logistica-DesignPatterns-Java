@@ -1,12 +1,21 @@
 package br.com.loja.Logistica.pedido;
 
 import br.com.loja.Logistica.orcamento.Orcamento;
+import br.com.loja.Logistica.pedido.acao.AcaoAposGerarPedido;
+import br.com.loja.Logistica.pedido.acao.EnviarEmailPedido;
+import br.com.loja.Logistica.pedido.acao.SalvarPedidoBC;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class GeraPedidoHandler {
 
+    private List<AcaoAposGerarPedido> acoes;
+
+    public GeraPedidoHandler(List<AcaoAposGerarPedido> acoes) {
+        this.acoes = acoes;
+    }
 
     //contrutor com injeção de dependencias: repository, service. etc;
 
@@ -17,8 +26,7 @@ public class GeraPedidoHandler {
         Pedido pedido = new Pedido(dados.getCliente(),
                 LocalDateTime.now(), orcamento);
 
-        System.out.println("Salvar pedido no Banco de dados.");
-        System.out.println("Enviar email com dados do novo pedido");
+        acoes.forEach(a -> a.executarAcao(pedido));
 
     }
 
