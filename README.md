@@ -13,4 +13,5 @@ Frameworks/ Bibliotecas: (opcional)
 ## Design Patterns Utilizados
 Aqui estão os Design Patterns implementados neste projeto:
 
-Padrão 1: Strategy - permite definir uma família de algoritmos, colocando-os em classes separadas, e fazer os objetos deles intercambiáveis.
+Padrão 1: Strategy - permitindo definir uma família de algoritmos, colocando-os em classes separadas, e fazer os objetos deles intercambiáveis.
+Padrão 2: Chain of Responsibility - permite que passe pedidos por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou o passa adiante para o próximo handler na corrente.
